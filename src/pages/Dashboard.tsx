@@ -26,7 +26,7 @@ const Dashboard: React.FC = () => {
       <IonContent fullscreen>
         <div className="animate-fade-in" style={{ padding: '0 16px' }}>
           <IonText color="medium">
-            <h2 style={{ fontSize: '1.8rem', fontWeight: '800', color: 'white', margin: '0 0 4px 0' }}>Hi, Alex</h2>
+            <h2 style={{ fontSize: '1.8rem', fontWeight: '800', color: 'white', margin: '0 0 4px 0' }}>Hi, Faith</h2>
             <p style={{ margin: '0 0 24px 0' }}>You're on a 12-day winning streak! 🔥</p>
           </IonText>
 
