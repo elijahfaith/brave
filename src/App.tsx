@@ -32,7 +32,6 @@ const App: React.FC = () => {
     <IonApp>
       <IonReactRouter>
         <IonTabs>
-          <div className="responsive-wrapper">
             <IonRouterOutlet>
               <Route exact path="/dashboard">
                 <Dashboard />
@@ -47,17 +46,14 @@ const App: React.FC = () => {
                 <Redirect to="/dashboard" />
               </Route>
             </IonRouterOutlet>
-          </div>
-          <IonTabBar slot="bottom" className="glass-card responsive-wrapper" style={{
+          <IonTabBar slot="bottom" className="glass-card" style={{
             margin: '20px auto 30px auto',
             borderRadius: '24px',
             border: '1px solid var(--premium-glass-border)',
             height: '70px',
             boxShadow: '0 10px 30px rgba(0,0,0,0.5)',
             width: 'calc(100% - 40px)',
-            maxWidth: '460px',
-            left: '0',
-            right: '0'
+            maxWidth: '460px'
           }}>
             <IonTabButton tab="dashboard" href="/dashboard">
               <IonIcon aria-hidden="true" icon={gridOutline} />

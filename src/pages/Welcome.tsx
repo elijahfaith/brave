@@ -15,7 +15,7 @@ const Welcome: React.FC<WelcomeProps> = ({ onStart }) => {
   return (
     <IonPage>
       <IonContent fullscreen forceOverscroll={false}>
-        <div className="responsive-wrapper welcome-content" style={{
+        <div className="welcome-content" style={{
           height: '100%',
           background: 'radial-gradient(circle at center, rgba(37, 117, 252, 0.1) 0%, transparent 70%)'
         }}>
