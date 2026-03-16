@@ -15,14 +15,8 @@ const Welcome: React.FC<WelcomeProps> = ({ onStart }) => {
   return (
     <IonPage>
       <IonContent fullscreen forceOverscroll={false}>
-        <div style={{
+        <div className="responsive-wrapper welcome-content" style={{
           height: '100%',
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center',
-          alignItems: 'center',
-          padding: '40px',
-          textAlign: 'center',
           background: 'radial-gradient(circle at center, rgba(37, 117, 252, 0.1) 0%, transparent 70%)'
         }}>
           <div className="animate-float" style={{
@@ -53,7 +47,7 @@ const Welcome: React.FC<WelcomeProps> = ({ onStart }) => {
               expand="block"
               className="premium-button"
               onClick={onStart}
-              style={{ width: '100%', maxWidth: '300px' }}
+              style={{ width: '100%', maxWidth: '300px', margin: '0 auto' }}
             >
               Get Started
               <IonIcon slot="end" icon={arrowForwardOutline} />
