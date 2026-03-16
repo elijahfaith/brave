@@ -32,26 +32,32 @@ const App: React.FC = () => {
     <IonApp>
       <IonReactRouter>
         <IonTabs>
-          <IonRouterOutlet>
-            <Route exact path="/dashboard">
-              <Dashboard />
-            </Route>
-            <Route exact path="/tasks">
-              <Tasks />
-            </Route>
-            <Route path="/profile">
-              <Profile onSignOut={() => setShowWelcome(true)} />
-            </Route>
-            <Route exact path="/">
-              <Redirect to="/dashboard" />
-            </Route>
-          </IonRouterOutlet>
-          <IonTabBar slot="bottom" className="glass-card" style={{
-            margin: '20px 20px 30px 20px',
+          <div className="responsive-wrapper">
+            <IonRouterOutlet>
+              <Route exact path="/dashboard">
+                <Dashboard />
+              </Route>
+              <Route exact path="/tasks">
+                <Tasks />
+              </Route>
+              <Route path="/profile">
+                <Profile onSignOut={() => setShowWelcome(true)} />
+              </Route>
+              <Route exact path="/">
+                <Redirect to="/dashboard" />
+              </Route>
+            </IonRouterOutlet>
+          </div>
+          <IonTabBar slot="bottom" className="glass-card responsive-wrapper" style={{
+            margin: '20px auto 30px auto',
             borderRadius: '24px',
             border: '1px solid var(--premium-glass-border)',
             height: '70px',
-            boxShadow: '0 10px 30px rgba(0,0,0,0.5)'
+            boxShadow: '0 10px 30px rgba(0,0,0,0.5)',
+            width: 'calc(100% - 40px)',
+            maxWidth: '460px',
+            left: '0',
+            right: '0'
           }}>
             <IonTabButton tab="dashboard" href="/dashboard">
               <IonIcon aria-hidden="true" icon={gridOutline} />

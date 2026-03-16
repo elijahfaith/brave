@@ -78,12 +78,32 @@ ion-content {
   --background: transparent;
 }
 
-body {
-  background: #000;
-  background-image: 
-    radial-gradient(at 0% 0%, hsla(253,16%,7%,1) 0, transparent 50%), 
-    radial-gradient(at 50% 10%, hsla(225,39%,30%,0.15) 0, transparent 50%), 
-    radial-gradient(at 100% 0%, hsla(339,49%,30%,0.15) 0, transparent 50%);
-  background-attachment: fixed;
+.responsive-wrapper {
+  max-width: 500px;
+  margin: 0 auto;
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+  }
+}
+
+.welcome-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  padding: 40px;
+  text-align: center;
 }
 
