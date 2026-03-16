@@ -34,7 +34,7 @@ interface ProfileProps {
   onSignOut: () => void;
 }
 
-const Profile: React.FC<ProfileProps> = ({ onSignOut }) => {
+const ProfilePage: React.FC<ProfileProps> = ({ onSignOut }) => {
   const [photo, setPhoto] = useState<string | undefined>('https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?s=250&d=identicon&r=PG');
   const [showAccountModal, setShowAccountModal] = useState(false);
   const [showPrivacyModal, setShowPrivacyModal] = useState(false);
@@ -198,4 +198,4 @@ const Profile: React.FC<ProfileProps> = ({ onSignOut }) => {
   );
 };
 
-export default Profile;
+export default ProfilePage;

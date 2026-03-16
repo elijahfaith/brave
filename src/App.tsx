@@ -11,8 +11,8 @@ import {
 import { IonReactRouter } from '@ionic/react-router';
 import { gridOutline, listOutline, personOutline } from 'ionicons/icons';
 import Dashboard from './pages/Dashboard';
-import Tasks from './pages/Tasks';
-import Profile from './pages/Profile';
+import Tasks from './pages/TasksPage';
+import ProfilePage from './pages/ProfilePage';
 
 import Welcome from './pages/Welcome';
 import { useState } from 'react';
@@ -40,7 +40,7 @@ const App: React.FC = () => {
                 <Tasks />
               </Route>
               <Route path="/profile">
-                <Profile onSignOut={() => setShowWelcome(true)} />
+                <ProfilePage onSignOut={() => setShowWelcome(true)} />
               </Route>
               <Route exact path="/">
                 <Redirect to="/dashboard" />
